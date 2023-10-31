@@ -2,7 +2,75 @@
     --bg-color:#354147;
     --white:#fff;
     --bkack:#000;
+    --font1:'Chronicle Display', sans-serif;
+    --font2:'Gilroy-Regular', sans-serif;
 }
 body{
     background-color: var(--bg-color);
 }
+/* 배경 */
+.bg-img1{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+}
+.bg-img2{
+    position: absolute;
+    left: 0; top: 464px;
+    width: 100%;
+}
+.bg-img3{
+    position: absolute;
+    left: 0; top: 768px;
+    width: 100%;
+}
+/* 헤더 */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 80px;
+    right: 80px;
+    top: 64px;
+    z-index: 10;
+}
+.logo{
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    font-family: var(--font1);
+    color: var(--white);
+}
+.gnb{
+    display: flex;
+    gap: 40px;
+}
+.gnb a{
+    font-weight: 700;
+    color: var(--white);
+    font-size: 18px;
+    line-height: 22px;
+}
+.btn-account{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 700;
+    color: var(--white);
+}
+.btn-account::before{
+    content: '';
+    background: url(../images/ico_member.svg);
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* font-family: 'Gilroy-Bold', sans-serif;
+font-family: 'Gilroy-Heavy', sans-serif;
+font-family: 'Gilroy-Light', sans-serif;
+font-family: 'Gilroy-Medium', sans-serif;
+font-family: 'Gilroy-Regular', sans-serif;
+font-family: 'Chronicle Display', sans-serif; */
