@@ -1,0 +1,8 @@
+:root{
+    --bg-color:#354147;
+    --white:#fff;
+    --bkack:#000;
+}
+body{
+    background-color: var(--bg-color);
+}
