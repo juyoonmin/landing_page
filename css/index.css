@@ -1,9 +1,9 @@
 :root{
-    --bg-color:#0B1D26;
+    --bg-color:#E4D0C2;
     --white:#fff;
     --white-5:rgba(255,255,255,.5);
     --bkack:#000;
-    --gold:#FBD784;
+    --green:#2E6314;
     --font1:'Chronicle Display', sans-serif;
     --font2:'Gilroy-Regular', sans-serif;
 }
@@ -15,7 +15,7 @@ body{
     overflow-x: hidden;
 }
 /* 배경 */
-.bg-img1{
+/* .bg-img1{
     position: absolute;
     left: 0; top: 0;
     width: 1920px;
@@ -32,7 +32,37 @@ body{
     left: 0; top: 768px;
     width: 1920px;
     z-index: -1;
-}
+} */
+#swiper {
+    width: 1462px;
+    height: 464px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 375px;
+    margin-bottom: 375px;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #swiper .swiper-button-next, #swiper .swiper-button-prev{
+    color: white;
+  }
+  #swiper .swiper-pagination-bullet-active{
+    background: white;
+  }
 /* 헤더 */
 .header{
     display: flex;
@@ -94,6 +124,7 @@ body{
     left: 80px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
 }
 .sns-title{
     writing-mode: vertical-rl;
@@ -101,6 +132,7 @@ body{
     font-size: 18px;
     line-height: 22px;
     color: var(--white);
+    
 }
 .btn-insta{
     width: 24px;
@@ -117,6 +149,7 @@ body{
     right: 80px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
 }
 .quick a{
     display: block;
@@ -146,13 +179,13 @@ body{
     line-height: 22px;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--green);
 }
 .subtitle::before{
     content: "";
     width: 72px;
     height: 2px;
-    background: var(--gold);
+    background: var(--green);
 }
 .visual_copy .maintitle{
     font-size: 88px;
@@ -187,12 +220,12 @@ body{
 }
 .graident-content{
     height: 700px;
-    background: linear-gradient(180deg,rgba(11,29,38,0) 0%, #0B1D26 61.38%);
+    /* background: linear-gradient(180deg,rgba(11,29,38,0) 0%, #0B1D26 61.38%); */
 }
 .index-contents{
     display: grid;
     gap: 200px;
-    margin: -460px auto 0;
+    margin: 0 auto;
     width: 1462px;
 }
 
@@ -209,7 +242,7 @@ body{
     flex-direction: row-reverse;
 }
 .block:nth-of-type(even) .block_conut{
-    left: 720px;
+    /* left: 720px; */
 }
 .block div{
     flex: 1;
@@ -245,7 +278,7 @@ body{
     gap: 16px;
     font-size: 18px;
     line-height: 22px;
-    color: var(--gold);
+    color: var(--green);
 }
 .block_more::after{
     content: '';
@@ -260,8 +293,9 @@ body{
     font-weight: 700;
     font-size: 240px;
     line-height: 1;
-    color: rgba(255,255,255,.1);
+    color: #AA8877;
     letter-spacing: -4px;
+    z-index: -1;
 }
 
 /* 푸터 */
@@ -294,7 +328,7 @@ body{
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--green);
     padding: 0 0 8px;
 }
 .footer_nav li{

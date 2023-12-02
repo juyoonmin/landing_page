@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -39,9 +41,9 @@
                 <div class="maintitle">
                     Be prepared for the Mountains and beyond!
                 </div>
-                <div class="txt-guide">
+                <a href="#block1" class="txt-guide">
                     scroll down
-                </div>
+                </a>
             </div>
             <nav class="quick">
                 <ul>
@@ -52,13 +54,20 @@
                 </ul>
             </nav>
         </div>
-        <img src="images/bg_sky.png" alt="배경" class="bg-img1">
-        <img src="images/bg_mount.png" alt="배경" class="bg-img2">
-        <img src="images/bg_hill.png" alt="배경" class="bg-img3">
-        <div class="graident-content"></div>
+        <!-- <img src="images/bg_main.jpg" alt="배경" class="bg-img1"> -->
+        <!-- <div class="graident-content"></div> -->
+        <div id="swiper" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/bg_main.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/bg_main2.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
         <section class="index-contents">
             <div class="block" id="block1">
-                <div data-aos="fade-right" data-aos-delay="800">
+                <div data-aos="fade-right" data-aos-delay="500">
                     <h2 class="block_title">What level of hiker are you?</h2>
                     <span class="block_conut">01</span>
                     <span class="subtitle">get Started</span>
@@ -72,10 +81,10 @@
                     </p>
                     <a href="" class="block_more">read more</a>
                 </div>
-                <img src="images/img_picture1.png" alt="이미지" data-aos-delay="1200" data-aos="fade-left">
+                <img src="images/img_picture1.jpg" alt="이미지" data-aos-delay="900" data-aos="fade-left">
             </div>
             <div class="block" id="block2">
-                <div data-aos-delay="1200" data-aos="fade-left">
+                <div data-aos-delay="900" data-aos="fade-left">
                     <h2 class="block_title">Picking the right Hiking Gear!</h2>
                     <span class="block_conut">02</span>
                     <span class="subtitle">Hiking Essentials</span>
@@ -86,10 +95,10 @@
                         clothes, which will get heavy and chafe wif they get sweaty or wet. </p>
                     <a href="" class="block_more">read more</a>
                 </div>
-                <img src="images/img_picture2.png" alt="이미지" data-aos="fade-right" data-aos-delay="800">
+                <img src="images/img_picture2.jpg" alt="이미지" data-aos="fade-right" data-aos-delay="500">
             </div>
             <div class="block" id="block3">
-                <div data-aos="fade-right" data-aos-delay="800">
+                <div data-aos="fade-right" data-aos-delay="500">
                     <h2 class="block_title">Understand Your Map & Timing</h2>
                     <span class="block_conut">03</span>
                     <span class="subtitle">where you go is the key</span>
@@ -103,8 +112,7 @@
                         turn at the junction.. </p>
                     <a href="" class="block_more">read more</a>
                 </div>
-
-                <img src="images/img_picture3.png" alt="이미지" data-aos-delay="1200" data-aos="fade-left" >
+                <img src="images/img_picture3.jpg" alt="이미지" data-aos-delay="900" data-aos="fade-left">
             </div>
         </section>
     </main>
@@ -149,11 +157,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        $('.quick a').on('click',function(){
+        $('.quick a').on('click', function () {
             $(this).parents('.quick').find('a').removeClass('active');
             $(this).addClass('active');
         });
 
         AOS.init();
+
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
     </script>
+
 </html>
