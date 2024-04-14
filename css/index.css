@@ -34,14 +34,14 @@ body{
     z-index: -1;
 } */
 #swiper {
-    width: 1462px;
-    height: 464px;
+    width: 65%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    margin-top: 375px;
-    margin-bottom: 375px;
+    margin-top: 200px;
+    margin-bottom: 250px;
   }
   .swiper-slide {
     text-align: center;
@@ -188,7 +188,7 @@ body{
     background: var(--green);
 }
 .visual_copy .maintitle{
-    font-size: 88px;
+    font-size: 5vw;
     line-height: 100px;
     font-weight: 600;
     letter-spacing: 6px;
@@ -226,14 +226,35 @@ body{
     display: grid;
     gap: 200px;
     margin: 0 auto;
-    width: 1462px;
+    width: 75%;
+}
+@media screen and (max-width:1200px) {
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 30px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .quick, .sns{
+        display: none;
+    }
+    .visual_copy .maintitle{
+        line-height: 70px;
+    }
+    #swiper{
+        width: 80%;
+        margin-top: 60px;
+        margin-bottom: 180px;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        display: none !important;
+    }
 }
 
 /* 콘텐츠 */
 
 .block{
     display: flex;
-    padding-left: 150px;
     gap: 114px;
     position: relative;
 
@@ -253,6 +274,8 @@ body{
 }
 .block img{
     width: 556px;
+    max-width: 100%;
+    height: auto;
 }
 .block .subtitle{
     order: 1;
@@ -296,6 +319,46 @@ body{
     color: #AA8877;
     letter-spacing: -4px;
     z-index: -1;
+}
+@media screen and (max-width:1200px) {
+    .subtitle{
+        font-size: 15px;
+    }
+    .block_conut{
+        font-size: 160px;
+    }
+    .block_more{
+        font-size: 15px;
+    }
+    .block_title {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .block_content{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:904px) {
+    .block_textbox{
+        padding: 0 35px;
+    }
+    .block{
+        flex-direction: column;
+        gap: 70px;
+    }
+    .block:nth-of-type(even){
+        flex-direction: column;
+    }
+    .block_img{
+        flex-direction: column;
+        align-items: center;
+    }
+    .block img{
+        width: 60%;
+    }
+    .block_title{
+        line-height: 60px;
+    }
 }
 
 /* 푸터 */
