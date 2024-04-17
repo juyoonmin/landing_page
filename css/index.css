@@ -330,6 +330,9 @@ nav{
     }
     .header {
         flex-direction: column;
+        position: relative;
+        left: 0;
+        right: 0;
     }
     nav {
         display: flex;
