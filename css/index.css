@@ -91,6 +91,9 @@ body {
     font-family: var(--font1);
     color: var(--white);
 }
+nav{
+    margin: 0 auto;
+}
 
 .gnb {
     display: flex;
@@ -274,11 +277,8 @@ body {
 }
 
 @media screen and (max-width:768px) {
-    .header{
-        width: 100%;
-        left: 0;
-        right: 0;
-        justify-content: space-around;
+    .gnb{
+        gap: 20px;
     }
     .gnb li{
         margin-right: 0;
@@ -288,9 +288,6 @@ body {
     }
     .header .logo{
         font-size: 24px;
-    }
-    .btn-account{
-        font-size: 15px;
     }
     .btn-account::before{
         width: 22px;
@@ -317,15 +314,37 @@ body {
         display: none !important;
     }
 }
-@media screen and (max-width:550px) {
+@media screen and (max-width:560px) {
     .header .logo{
         font-size: 21px;
+        margin-bottom: 10px;
     }
     .btn-account{
         font-size: 13px;
     }
+    .gnb{
+        gap: 10px;
+    }
     .gnb li a{
         font-size: 13px;
+    }
+    .header {
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .btn-account::before {
+        display: none;
+    }
+}
+@media screen and (max-width:390px){
+    .gnb{
+        gap: 7px;
+    }
+    .gnb li a{
+        font-size: 11px;
     }
 }
 

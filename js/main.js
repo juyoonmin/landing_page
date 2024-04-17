@@ -41,7 +41,7 @@ $(document).ready(function () {
     });
 });
 
-// AOS.init();
+AOS.init();
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
