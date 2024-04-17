@@ -321,9 +321,13 @@ nav{
     }
     .btn-account{
         font-size: 13px;
+        margin-top:5px;
     }
     .gnb{
         gap: 10px;
+    }
+    .gnb li{
+        margin-right: 28px;
     }
     .gnb li a{
         font-size: 13px;
@@ -346,7 +350,7 @@ nav{
     .gnb{
         gap: 7px;
     }
-    .gnb li a{
+    .btn-account{
         font-size: 11px;
     }
 }
