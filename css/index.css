@@ -74,14 +74,16 @@ body {
 
 /* 헤더 */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     left: 80px;
     right: 80px;
     top: 64px;
     z-index: 10;
+}
+.Pc_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -91,7 +93,12 @@ body {
     font-family: var(--font1);
     color: var(--white);
 }
-nav{
+
+.Mobile_nav {
+    display: none;
+}
+
+nav {
     margin: 0 auto;
 }
 
@@ -277,19 +284,23 @@ nav{
 }
 
 @media screen and (max-width:768px) {
-    .gnb{
+    .gnb {
         gap: 20px;
     }
-    .gnb li{
+
+    .gnb li {
         margin-right: 0;
     }
-    .gnb li a{
+
+    .gnb li a {
         font-size: 15px;
     }
-    .header .logo{
+
+    .header .logo {
         font-size: 24px;
     }
-    .btn-account::before{
+
+    .btn-account::before {
         width: 22px;
         height: 22px;
     }
@@ -314,44 +325,59 @@ nav{
         display: none !important;
     }
 }
+
 @media screen and (max-width:560px) {
-    .header .logo{
+    .Pc_nav {
+        display: none;
+    }
+
+    .Mobile_nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .logo {
         font-size: 21px;
         margin-bottom: 10px;
     }
-    .btn-account{
+
+    .btn-account {
         font-size: 13px;
-        margin-top:5px;
     }
-    .gnb{
+
+    .gnb {
         gap: 10px;
     }
-    .gnb li{
+
+    .gnb li {
         margin-right: 28px;
     }
-    .gnb li a{
+
+    .gnb li a {
         font-size: 13px;
     }
+
     .header {
         flex-direction: column;
         position: relative;
         left: 0;
         right: 0;
     }
+
     nav {
         display: flex;
         flex-direction: row;
     }
+
     .btn-account::before {
         display: none;
     }
 }
-@media screen and (max-width:390px){
-    .gnb{
+
+@media screen and (max-width:390px) {
+    .gnb {
         gap: 7px;
-    }
-    .btn-account{
-        font-size: 11px;
     }
 }
 
@@ -485,11 +511,13 @@ nav{
         line-height: 60px;
     }
 }
+
 @media screen and (max-width:768px) {
     .block_textbox {
         padding: 0;
     }
 }
+
 /* 푸터 */
 .footer {
     margin: 200px auto 120px;
@@ -498,9 +526,11 @@ nav{
     justify-content: space-between;
     flex-direction: column;
 }
-.logo_footer{
+
+.logo_footer {
     color: var(--green);
 }
+
 .footer_left {
     display: grid;
     grid-template-columns: 1fr;
@@ -546,22 +576,27 @@ nav{
 }
 
 @media screen and (max-width:1200px) {
-    .logo_footer{
+    .logo_footer {
         font-size: 26px;
     }
-    .footer_nav h2{
+
+    .footer_nav h2 {
         font-size: 19px;
     }
-    .footer_nav li{
+
+    .footer_nav li {
         padding: 14px 0 0;
     }
-    .footer_nav a{
+
+    .footer_nav a {
         line-height: 20px;
         font-size: 15px;
     }
-    .footer_copy{
+
+    .footer_copy {
         font-size: 14px;
     }
+
     .footer_right {
         gap: 25%;
     }
