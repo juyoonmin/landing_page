@@ -10,12 +10,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background-color: var(--bg-color);
     overflow-x: hidden;
 }
+
 
 /* 배경 */
 /* .bg-img1{
@@ -104,13 +106,7 @@ nav {
 
 .gnb {
     display: flex;
-    gap: 40px;
-}
-
-
-.gnb li {
-    display: inline-block;
-    margin-right: 20px;
+    gap: 100px;
 }
 
 .gnb a {
@@ -284,12 +280,8 @@ nav {
 }
 
 @media screen and (max-width:768px) {
-    .gnb {
-        gap: 20px;
-    }
-
-    .gnb li {
-        margin-right: 0;
+    .gnb{
+        gap: 40px;
     }
 
     .gnb li a {
@@ -326,7 +318,7 @@ nav {
     }
 }
 
-@media screen and (max-width:560px) {
+@media screen and (max-width:600px) {
     .Pc_nav {
         display: none;
     }
@@ -344,14 +336,6 @@ nav {
 
     .btn-account {
         font-size: 13px;
-    }
-
-    .gnb {
-        gap: 10px;
-    }
-
-    .gnb li {
-        margin-right: 28px;
     }
 
     .gnb li a {
@@ -372,12 +356,6 @@ nav {
 
     .btn-account::before {
         display: none;
-    }
-}
-
-@media screen and (max-width:390px) {
-    .gnb {
-        gap: 7px;
     }
 }
 
