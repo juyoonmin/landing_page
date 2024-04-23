@@ -39,7 +39,18 @@ $(document).ready(function () {
             }, 800);
         }
     });
+    //스크롤 1500이상 내려갔을때 클래스 추가
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var header = $('.header');
+        if (scroll > 1500) {
+            header.addClass('scrolled');
+        } else {
+            header.removeClass('scrolled');
+        }
+    });
 });
+
 
 AOS.init();
 
